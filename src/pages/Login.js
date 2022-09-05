@@ -1,22 +1,41 @@
 import { ErrorBoundary } from "react-error-boundary";
 import { Fallback } from "../components/shared/Fallback";
 import { errorHandler } from "../components/shared/ErrorHandler";
+import { useState } from "react";
+import axios from "axios";
+
 
 import Navbar from "../components/shared/Navbar";
 import Header from "../components/shared/Header";
 import PageNav from "../components/shared/PageNav";
-import Body from "../components/home/Body";
+import SignupLogin from "../components/shared/Login";
 import SiteIndex from "../components/shared/SiteIndex";
 import Footer from "../components/shared/Footer";
 
-export default function Home({ isLoggedIn, setisLoggedIn }) {
+
+export default function Login({ isLoggedIn, setisLoggedIn }) {
+  
+  // localStorage.setItem('userID')
+  axios
+    .post("http://localhost:4000/checklogin", {}, { withCredentials: true })
+    .then((res) => {
+      console.log(res.data);
+      setisLoggedIn(res.data);
+    });
+
   return (
     <div>
       <ErrorBoundary FallbackComponent={Fallback} onError={errorHandler}>
-        <Navbar isLoggedIn={isLoggedIn} setisLoggedIn={setisLoggedIn} />
-        <Header />
+        <Navbar
+          isLoggedIn={isLoggedIn}
+          setisLoggedIn={setisLoggedIn}
+        />
+        <Header/>
         <PageNav />
-        <Body />
+        <SignupLogin
+          setIsSignUp={setIsSignUp}
+          isLoggedIn={isLoggedIn}
+        />
         <SiteIndex />
         <Footer />
       </ErrorBoundary>

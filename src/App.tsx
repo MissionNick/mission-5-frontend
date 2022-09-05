@@ -1,6 +1,12 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { useState } from "react";
-import Home from "./pages/Home";
+import PrivateRoutePolicyMember from "./pages/PrivateRoutePolicyMember";
+import PrivateRoutePolicyOwner from "./pages/PrivateRoutePolicyOwner";
+import Home from "./pages/Home"
+import InsuranceHome from "./pages/InsuranceHome";
+import Login from "./pages/Login"
+import Register from "./pages/Register"
+import PageNotFound from "./pages/PageNotFound";
 
 function App() {
   const [isLoggedIn, setisLoggedIn] = useState(false);
@@ -9,15 +15,17 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home isLoggedIn={isLoggedIn} setisLoggedIn={setisLoggedIn} />} />
-          <Route element={<PrivateRoute isLoggedIn={isLoggedIn} setisLoggedIn={setisLoggedIn} />}>
-            <Route path="/insurancepolicy" element={<Policy isLoggedIn={isLoggedIn} setisLoggedIn={setisLoggedIn}/>}/>
+          <Route path="/login" element={<Login isLoggedIn={isLoggedIn} setisLoggedIn={setisLoggedIn} />} />
+          <Route path="/register" element={<Register isLoggedIn={isLoggedIn} setisLoggedIn={setisLoggedIn} />} />
+          <Route path="/insurance" element={<InsuranceHome isLoggedIn={isLoggedIn} setisLoggedIn={setisLoggedIn} />} />
+          <Route element={<PrivateRoutePolicyOwner isLoggedIn={isLoggedIn} setisLoggedIn={setisLoggedIn} />}>
+            <Route path="/insurance/accounts" element={<InsuranceHome isLoggedIn={isLoggedIn} setisLoggedIn={setisLoggedIn}/>}/>
           </Route>
-          <Route element={ <PrivateRouteTeacher isLoggedIn={isLoggedIn} setisLoggedIn={setisLoggedIn} /> }>
-            <Route path="/teacher" element={ <ProjectLibrary isLoggedIn={isLoggedIn} setisLoggedIn={setisLoggedIn} />}/>
-            <Route path="/progress-tracker" element={ <ProgressTracker isLoggedIn={isLoggedIn} setisLoggedIn={setisLoggedIn} />}/>
-            <Route path="/student-profiles" element={ <StudentProfiles isLoggedIn={isLoggedIn} setisLoggedIn={setisLoggedIn} /> }/>
-            <Route path="/help-requests" element={<HelpRequests isLoggedIn={isLoggedIn} setisLoggedIn={setisLoggedIn} />} />
-            <Route path="/project-submissions" element={<ProjectSubmissions isLoggedIn={isLoggedIn} setisLoggedIn={setisLoggedIn}/>} />
+          <Route element={ <PrivateRoutePolicyMember isLoggedIn={isLoggedIn} setisLoggedIn={setisLoggedIn} /> }>
+            <Route path="/insurance/policy" element={ <InsuranceHome isLoggedIn={isLoggedIn} setisLoggedIn={setisLoggedIn} />}/>
+            <Route path="/insurance/claim" element={ <InsuranceHome isLoggedIn={isLoggedIn} setisLoggedIn={setisLoggedIn} />}/>
+            <Route path="/insurance/documents" element={ <InsuranceHome isLoggedIn={isLoggedIn} setisLoggedIn={setisLoggedIn} />}/>
+            <Route path="/insurance/car" element={ <InsuranceHome isLoggedIn={isLoggedIn} setisLoggedIn={setisLoggedIn} />}/>
           </Route>
           <Route path="*" element={<PageNotFound />} />
         </Routes>

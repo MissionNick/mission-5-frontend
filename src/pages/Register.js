@@ -5,11 +5,11 @@ import { errorHandler } from "../components/shared/ErrorHandler";
 import Navbar from "../components/shared/Navbar";
 import Header from "../components/shared/Header";
 import PageNav from "../components/shared/PageNav";
-import Body from "../components/home/Body";
+import Body from "../components/registration/Body";
 import SiteIndex from "../components/shared/SiteIndex";
 import Footer from "../components/shared/Footer";
 
-export default function Home({ isLoggedIn, setisLoggedIn }) {
+export default function Register({ isLoggedIn, setisLoggedIn }) {
   return (
     <div>
       <ErrorBoundary FallbackComponent={Fallback} onError={errorHandler}>

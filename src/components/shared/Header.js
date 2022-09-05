@@ -1,7 +1,7 @@
-import Logo from "../../assets/turnerscars_logo_car.png";
-import ChineseContact from "../../assets/language-chinese-contact.png"
-import Register from "./Register";
-import Signin from "./Signin";
+import Logo from "../../assets/images/turnerscars_logo_car.png";
+import ChineseContact from "../../assets/images/language-chinese-contact.png"
+import Register from "./btnRegister";
+import Signin from "./btnSignin";
 import styles from "../styles/Header.module.css"
 import Navbar from "./Navbar";
 import { FaPhoneAlt, FaUser} from "react-icons/fa";

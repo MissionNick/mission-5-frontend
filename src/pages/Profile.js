@@ -5,7 +5,7 @@ import { errorHandler } from "../components/shared/ErrorHandler";
 
 import Navbar from "../components/shared/Navbar";
 import Footer from "../components/shared/Footer"
-import Home from "../components/home"
+import Home from "../components/insurance"
 
 
 export default function Profile({ isLoggedIn, setisLoggedIn }) {
