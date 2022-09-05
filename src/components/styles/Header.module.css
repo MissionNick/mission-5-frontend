@@ -1,0 +1,46 @@
+.logo {
+    margin-left: 5rem;
+    width: 20rem;
+}
+
+jt{
+font-style: italic;
+}
+
+.chinese {
+    margin-left: 5rem;
+    width: 20rem;
+    cursor: pointer;
+}
+
+.btnHeader {
+   height:max-content;
+   border:none;
+   background: none;
+   cursor:pointer;
+}
+
+.header_container {
+    display: flex;
+    width: 100;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.header_top {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+
+}
+
+.header_contact {
+    display: flex;
+    flex-direction: row;
+    margin-top: 2rem;
+    width:auto;
+}
+
+
+
