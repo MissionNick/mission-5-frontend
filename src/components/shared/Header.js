@@ -25,14 +25,14 @@ export default function Header({isLoggedIn}) {
           <button onClick={signin} className={btnHeader}>
             LOGIN
           </button>
-          <jt>OR</jt>
+          <p>OR</p>
           <button onClick={register} className={btnHeader}>
             REGISTER
           </button>
           <FaPhoneAlt />
-          <jt>0800 887 637</jt>
+          <p>0800 887 637</p>
           <MdLocationPin />
-          <jt>Find Us</jt>
+          <p>Find Us</p>
           <div className={chinese}>
             <img src={ChineseContact} alt="Chinese speaking contact"></img>
           </div>
