@@ -1,7 +1,5 @@
 import Logo from "../../assets/images/turnerscars_logo_car.png";
 import ChineseContact from "../../assets/images/language-chinese-contact.png";
-import Register from "./btnRegister";
-import Signin from "./btnSignin";
 import styles from "../styles/Header.module.css";
 import Navbar from "./Navbar";
 import { FaPhoneAlt, FaUser } from "react-icons/fa";
@@ -28,11 +26,11 @@ export default function Header({ isLoggedIn }) {
         </div>
         <div className={header_contact}>
           <FaUser />
-          <Link to="./Login.js" exact component={Login} className={btnHeader}>
+          <Link to="/login" exact component={Login} className={btnHeader}>
             LOGIN
           </Link>
           <p>OR</p>
-          <Link to="./Login.js" exact component={Login} className={btnHeader}>
+          <Link to ="/login" exact component={Login}  className={btnHeader}>
             REGISTER
           </Link>
           <FaPhoneAlt />
