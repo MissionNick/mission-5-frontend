@@ -9,7 +9,7 @@ import { MdLocationPin } from "react-icons/md";
 
 const { logo, btnHeader, header_container,header_top,header_contact,chinese} = styles;
 
-export default function Header() {
+export default function Header({isLoggedIn}) {
   const signin = new Signin();
   const register = new Register();
 
@@ -25,9 +25,9 @@ export default function Header() {
           <button onClick={signin} className={btnHeader}>
             LOGIN
           </button>
-            <jt>OR</jt>
+          <jt>OR</jt>
           <button onClick={register} className={btnHeader}>
-           REGISTER
+            REGISTER
           </button>
           <FaPhoneAlt />
           <jt>0800 887 637</jt>

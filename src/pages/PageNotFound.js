@@ -1,7 +1,23 @@
-export default function PageNotFound() {
+import { ErrorBoundary } from "react-error-boundary";
+import { Fallback } from "../components/shared/Fallback";
+import { errorHandler } from "../components/shared/ErrorHandler";
+
+import Header from "../components/shared/Header";
+import PageNav from "../components/shared/PageNav";
+import Body from "../components/shared/PageNotFound";
+import SiteIndex from "../components/shared/SiteIndex";
+import Footer from "../components/shared/Footer";
+
+export default function PageNotFound({ isLoggedIn }) {
   return (
     <div>
-      <h2>Page Not Found</h2>
+      <ErrorBoundary FallbackComponent={Fallback} onError={errorHandler}>
+        <Header isLoggedIn={isLoggedIn} />
+        <PageNav />
+        <Body />
+        <SiteIndex />
+        <Footer />
+      </ErrorBoundary>
     </div>
   );
 }

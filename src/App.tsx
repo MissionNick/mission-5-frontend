@@ -9,25 +9,51 @@ import Register from "./pages/Register"
 import PageNotFound from "./pages/PageNotFound";
 
 function App() {
-  const [isLoggedIn, setisLoggedIn] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
   return (
     <div>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Home isLoggedIn={isLoggedIn} setisLoggedIn={setisLoggedIn} />} />
-          <Route path="/login" element={<Login isLoggedIn={isLoggedIn} setisLoggedIn={setisLoggedIn} />} />
-          <Route path="/register" element={<Register isLoggedIn={isLoggedIn} setisLoggedIn={setisLoggedIn} />} />
-          <Route path="/insurance" element={<InsuranceHome isLoggedIn={isLoggedIn} setisLoggedIn={setisLoggedIn} />} />
-          <Route element={<PrivateRoutePolicyOwner isLoggedIn={isLoggedIn} setisLoggedIn={setisLoggedIn} />}>
-            <Route path="/insurance/accounts" element={<InsuranceHome isLoggedIn={isLoggedIn} setisLoggedIn={setisLoggedIn}/>}/>
+          <Route path="/" element={<Home isLoggedIn={isLoggedIn} />} />
+          <Route
+            path="/login"
+            element={
+              <Login isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />
+            }
+          />
+          <Route
+            path="/register"
+            element={<Register isLoggedIn={isLoggedIn} />}
+          />
+          <Route
+            path="/insurance"
+            element={<InsuranceHome isLoggedIn={isLoggedIn} />}
+          />
+          <Route element={<PrivateRoutePolicyOwner isLoggedIn={isLoggedIn} />}>
+            <Route
+              path="/insurance/accounts"
+              element={<InsuranceHome isLoggedIn={isLoggedIn} />}
+            />
           </Route>
-          <Route element={ <PrivateRoutePolicyMember isLoggedIn={isLoggedIn} setisLoggedIn={setisLoggedIn} /> }>
-            <Route path="/insurance/policy" element={ <InsuranceHome isLoggedIn={isLoggedIn} setisLoggedIn={setisLoggedIn} />}/>
-            <Route path="/insurance/claim" element={ <InsuranceHome isLoggedIn={isLoggedIn} setisLoggedIn={setisLoggedIn} />}/>
-            <Route path="/insurance/documents" element={ <InsuranceHome isLoggedIn={isLoggedIn} setisLoggedIn={setisLoggedIn} />}/>
-            <Route path="/insurance/car" element={ <InsuranceHome isLoggedIn={isLoggedIn} setisLoggedIn={setisLoggedIn} />}/>
+          <Route element={<PrivateRoutePolicyMember isLoggedIn={isLoggedIn} />}>
+            <Route
+              path="/insurance/policy"
+              element={<InsuranceHome isLoggedIn={isLoggedIn} />}
+            />
+            <Route
+              path="/insurance/claim"
+              element={<InsuranceHome isLoggedIn={isLoggedIn} />}
+            />
+            <Route
+              path="/insurance/documents"
+              element={<InsuranceHome isLoggedIn={isLoggedIn} />}
+            />
+            <Route
+              path="/insurance/car"
+              element={<InsuranceHome isLoggedIn={isLoggedIn} />}
+            />
           </Route>
-          <Route path="*" element={<PageNotFound />} />
+          <Route path="*" element={<PageNotFound isLoggedIn={isLoggedIn} />} />
         </Routes>
       </BrowserRouter>
     </div>

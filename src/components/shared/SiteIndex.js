@@ -1,10 +1,10 @@
 import styles from "../styles/SiteIndex.module.css";
 
-const { container } = styles;
+const { site_container } = styles;
 
 export default function SiteIndex() {
     return (
-        <div className={container}>
+        <div className={site_container}>
             Site Index
         </div>
     )
