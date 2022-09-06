@@ -6,6 +6,8 @@ import styles from "../styles/Header.module.css"
 import Navbar from "./Navbar";
 import { FaPhoneAlt, FaUser} from "react-icons/fa";
 import { MdLocationPin } from "react-icons/md";
+import {Link} from 'react-router-dom'
+import Login from "../../pages/Login";
 
 const { logo, btnHeader, header_container,header_top,header_contact,chinese} = styles;
 
@@ -22,13 +24,13 @@ export default function Header({isLoggedIn}) {
         </div>
         <div className={header_contact}>
           <FaUser />
-          <button onClick={signin} className={btnHeader}>
+          <Link to ="./Login.js" exact component={Login}  className={btnHeader}>
             LOGIN
-          </button>
+          </Link>
           <jt>OR</jt>
-          <button onClick={register} className={btnHeader}>
+          <Link to ="./Login.js" exact component={Login}  className={btnHeader}>
             REGISTER
-          </button>
+          </Link>
           <FaPhoneAlt />
           <jt>0800 887 637</jt>
           <MdLocationPin />
