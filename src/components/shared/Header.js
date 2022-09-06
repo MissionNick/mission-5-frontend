@@ -27,14 +27,14 @@ export default function Header({isLoggedIn}) {
           <Link to ="./Login.js" exact component={Login}  className={btnHeader}>
             LOGIN
           </Link>
-          <jt>OR</jt>
+          <p>OR</p>
           <Link to ="./Login.js" exact component={Login}  className={btnHeader}>
             REGISTER
           </Link>
           <FaPhoneAlt />
-          <jt>0800 887 637</jt>
+          <p>0800 887 637</p>
           <MdLocationPin />
-          <jt>Find Us</jt>
+          <p>Find Us</p>
           <div className={chinese}>
             <img src={ChineseContact} alt="Chinese speaking contact"></img>
           </div>
