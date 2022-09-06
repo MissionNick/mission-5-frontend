@@ -1,8 +1,12 @@
-import React from 'react'
+import styles from "../styles/Insurance.module.css"
+
+const { insurance_container } = styles;
 
 const Body = () => {
   return (
-    <div>Insurance Page Body</div>
+    <div className={insurance_container}>
+      Insurance Page Body
+    </div>
   )
 }
 

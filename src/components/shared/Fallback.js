@@ -25,7 +25,6 @@ const style = {
 export const Fallback = () => {
 
   const [open, setOpen] = React.useState(true);
-  const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
 
   return (
