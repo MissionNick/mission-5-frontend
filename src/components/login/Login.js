@@ -1,7 +1,7 @@
 import styles from "../styles/Login.module.css"
 import { useState } from 'react'
 
-const {submitButton,login_container,email,font,password}  = styles;
+const {submitButton,login_container,email,font,password,container}  = styles;
 
 
  function Login({isLoggedIn,setIsloggedIn}) {
@@ -21,6 +21,7 @@ const handleSubmit = (event) => {
   alert(inputs)
 }
   return (
+  <div className={container}> 
     <div className={login_container}>
       <form onSubmit={handleSubmit}>
                     <label for="email" className={font}>
@@ -43,7 +44,8 @@ const handleSubmit = (event) => {
                     <br/>
             <input className={submitButton} type="submit" value="Submit" />
               </form>
-    </div>
+      </div>
+   </div> 
   )
 }
 export default Login
