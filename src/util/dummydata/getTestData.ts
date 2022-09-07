@@ -1,13 +1,14 @@
-import { json } from 'stream/consumers';
+const getTestData = (email: String) => {
 
-const getTestData = (email) => {
+    /*fetch("./user.json", { mode: "no-cors" })
+    .then((res) => res.json())
+    .then((data) => getuser(data));
+*/
+  const users = require("./user.json");
 
-fetch("./user.json")
-  .then((response) => response.json())
-  .then((json) => console.log(json));
-    
-    
-  return (json)
-}
+  const search = users.find((e: any) => e.email === email);
 
-export default getTestData
+  return search === undefined ? { error: "No user found" } : search;
+};
+
+export default getTestData;
