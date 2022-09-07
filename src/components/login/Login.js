@@ -1,8 +1,5 @@
-import React from 'react'
 import styles from "../styles/Login.module.css"
-import {useState} from 'react'
-
-
+import { useState } from 'react'
 
 const submitButton = styles;
 const login_container = styles;

@@ -2,23 +2,31 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { useState } from "react";
 import PrivateRoutePolicyMember from "./pages/PrivateRoutePolicyMember";
 import PrivateRoutePolicyOwner from "./pages/PrivateRoutePolicyOwner";
-import Home from "./pages/Home"
+import Home from "./pages/Home";
 import InsuranceHome from "./pages/InsuranceHome";
-import Login from "./pages/Login"
-import Register from "./pages/Register"
+import Login from "./pages/Login";
+import Register from "./pages/Register";
 import PageNotFound from "./pages/PageNotFound";
+import { UserContext } from "./helper/Context";
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [userDetails, setUserDetails] = useState([]);
+
   return (
-    <div>
+    <UserContext.Provider value={{ isLoggedIn, userDetails, setUserDetails }}>
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home isLoggedIn={isLoggedIn} />} />
           <Route
             path="/login"
             element={
-              <Login isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn}></Login>
+              <Login
+                isLoggedIn={isLoggedIn}
+                setIsLoggedIn={setIsLoggedIn}
+                userDetails={userDetails}
+                setuserDetails={setUserDetails}
+              ></Login>
             }
           />
           <Route
@@ -56,7 +64,7 @@ function App() {
           <Route path="*" element={<PageNotFound isLoggedIn={isLoggedIn} />} />
         </Routes>
       </BrowserRouter>
-    </div>
+      </UserContext.Provider>
   );
 }
 

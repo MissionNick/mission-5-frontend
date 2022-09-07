@@ -8,13 +8,13 @@ import LoginBody from "../components/login/Login";
 import SiteIndex from "../components/shared/SiteIndex";
 import Footer from "../components/shared/Footer";
 
-export default function Login({ isLoggedIn, setIsLoggedIn }) {
+export default function Login(isLoggedIn) {
   return (
     <div>
       <ErrorBoundary FallbackComponent={Fallback} onError={errorHandler}>
         <Header isLoggedIn={isLoggedIn} />
         <PageNav />
-        <LoginBody isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />
+        <LoginBody />
         <SiteIndex />
         <Footer />
       </ErrorBoundary>
