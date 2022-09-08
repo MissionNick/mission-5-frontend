@@ -41,12 +41,16 @@ body{
     border-radius: 25px;
     margin-left: 300px;
     box-shadow: 5px 10px 8px #888888;
+    
   
     transition: background-color .4s ease-out;
   }
   .submitButton:hover {
     background-color: rgba(45, 118, 184, 1);
     color:white;
+    transition: background-color .4s ease-out;
+    box-shadow: 5px 10px 8px #888888;
+    background: linear-gradient(to bottom,rgb(22, 63, 139),rgba(45, 118, 184, 1));
   }
 
   input[type=text],.email, input[type=password], .password {

@@ -4,7 +4,7 @@ import { errorHandler } from "../components/shared/ErrorHandler";
 
 
 import Header from "../components/shared/Header";
-import Menu from "../components/menu/MenuRegistration";
+import Menu from "../components/menu/Menu";
 import Body from "../components/home/Home";
 import SiteIndex from "../components/shared/SiteIndex";
 import Footer from "../components/shared/Footer";

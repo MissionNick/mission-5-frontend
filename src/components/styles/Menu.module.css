@@ -1,4 +1,4 @@
-.page_nav_container {
+.page_nav_container{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -12,9 +12,12 @@
     font-weight: lighter;
     
 }
-  .isActive{
-    color: white;
-    text-decoration: none;
-    font-weight: lighter;
+.activeNavLink{
+    background-color: lightgray;
     
+}
+.headerNavLinks{
+  color: white;
+  text-decoration: none;
+  font-weight: lighter;
 }

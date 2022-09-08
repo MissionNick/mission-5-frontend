@@ -10,10 +10,12 @@ import Login from "../../pages/Login";
 const {
   logo,
   btnHeader,
+  btnHeader1,
   header_container,
   header_top,
   header_contact,
   chinese,
+  Or
 } = styles;
 
 export default function Header({ isLoggedIn }) {
@@ -28,9 +30,9 @@ export default function Header({ isLoggedIn }) {
           <FaUser />
           <Link to="/login" exact component={Login} className={btnHeader}>
             LOGIN
-          </Link>
-          <p>OR</p>
-          <Link to ="/login" exact component={Login}  className={btnHeader}>
+          </Link> 
+          <p className={Or}>OR</p>
+          <Link to ="/login" exact component={Login}  className={btnHeader1}>
             REGISTER
           </Link>
           <FaPhoneAlt />
