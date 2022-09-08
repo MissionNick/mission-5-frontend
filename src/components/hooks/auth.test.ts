@@ -37,8 +37,8 @@ describe("Auth positive tests", () => {
       email: "member@domain.com",
       password: "0987654321",
       role: "account.member",
-      photo: "url",
-      name: "Lillian",
+      photo: "Lillian.png",
+      name: "Lillian Mackintosh",
     };
 
     //Act

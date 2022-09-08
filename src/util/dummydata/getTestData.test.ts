@@ -9,8 +9,8 @@ describe("GetTestData tests - email", () => {
       email: "owner@domain.com",
       password: "1234567890",
       role: "account.owner",
-      photo: "url",
-      name: "Mike",
+      photo: "Mike.png",
+      name: "Mike Mackintosh",
     };
 
     //Act
@@ -28,8 +28,8 @@ describe("GetTestData tests - email", () => {
       email: "member@domain.com",
       password: "0987654321",
       role: "account.member",
-      photo: "url",
-      name: "Lillian",
+      photo: "Lillian.png",
+      name: "Lillian Mackintosh",
     };
 
     //Act
