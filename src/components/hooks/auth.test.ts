@@ -3,11 +3,12 @@ import auth from "./auth";
 describe("Auth negative tests", () => {
   it("User email empty returns error", () => {
     //Arrange
-    const input = "";
+    const email = "";
+    const password = "";
     const expected = { error: "Invalid Email" };
 
     //Act
-    const actual: any = auth(input);
+    const actual: any = auth(email,password);
 
     //Assert
     expect(actual).toStrictEqual(expected);
@@ -15,11 +16,12 @@ describe("Auth negative tests", () => {
 
   it("User NotRegistered returns error", () => {
     //Arrange
-    const input = "notregisterd@domain.com";
+    const email = "notregisterd@domain.com";
+    const password = "";
     const expected = { error: "No user found" };
 
     //Act
-    const actual: any = auth(input);
+    const actual: any = auth(email,password);
 
     //Assert
     expect(actual).toStrictEqual(expected);
@@ -29,7 +31,8 @@ describe("Auth negative tests", () => {
 describe("Auth positive tests", () => {
   it("User Lillian returns Lillian as Member values", () => {
     //Arrange
-    const input = "member@domain.com";
+    const email = "member@domain.com";
+    const password = "0987654321";
     const expected = {
       email: "member@domain.com",
       password: "0987654321",
@@ -39,7 +42,7 @@ describe("Auth positive tests", () => {
     };
 
     //Act
-    const actual: any = auth(input);
+    const actual: any = auth(email,password);
 
     //Assert
     expect(actual).toStrictEqual(expected);

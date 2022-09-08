@@ -3,8 +3,8 @@ import { useState } from "react";
 import { UserContext } from "../../helper/Context";
 import tryLogin from "./tryLogin";
 
-const {submitButton,login_container,email,font,password,mainBody}  = styles;
-
+const { submitButton, login_container, email, font, password, mainBody } =
+  styles;
 
 function Login() {
   //const [isLoggedIn, setIsLoggedIn] = useState();
@@ -22,12 +22,13 @@ function Login() {
     setUserDetails,
     setIsLoggedIn
   ) => {
-    const tryEmail = { email: "" }
-    tryEmail.email = inputs.email
-    setUserDetails(tryEmail);   //change to input.email
-    tryLogin(userDetails, setUserDetails, setIsLoggedIn)
-    console.log('User Details',userDetails.email);
-  }
+    const tryUser = { email: "", password: "" };
+    tryUser.email = inputs.email;
+    tryUser.password = inputs.pwd;
+    setUserDetails(tryUser); //change to input.email
+    tryLogin(userDetails, setUserDetails, setIsLoggedIn);
+    console.log("User Details", userDetails);
+  };
 
   return (
     <UserContext.Consumer>
@@ -40,27 +41,58 @@ function Login() {
                   <br />
                   <b>Email</b>
                   <br />
-                  <input className={email} name="email" type="email" value={inputs.email} onChange={handleChange} />
+                  <input
+                    className={email}
+                    name="email"
+                    type="email"
+                    value={inputs.email}
+                    onChange={handleChange}
+                  />
                 </label>
                 <label className="writing">
                   <br />
                   <b>Password</b>
                   <br />
-                  <input className={password} name="pwd" type="passport" value={inputs.pwd} onChange={handleChange} />
+                  <input
+                    className={password}
+                    name="pwd"
+                    type="passport"
+                    value={inputs.pwd}
+                    onChange={handleChange}
+                  />
                 </label>
                 <label className={font}>
                   <br />
-                  <input type="checkbox" checked="checked" name="remember" styleName="margin-bottom:15px" />
+                  <input
+                    type="checkbox"
+                    checked="checked"
+                    name="remember"
+                    styleName="margin-bottom:15px"
+                  />
                   Remember me
                 </label>
                 <br />
-                <button className={submitButton} type="button" onClick={() => handleSubmit(userDetails, isLoggedIn, setUserDetails, setIsLoggedIn)}> Login </button>
+                <button
+                  className={submitButton}
+                  type="button"
+                  onClick={() =>
+                    handleSubmit(
+                      userDetails,
+                      isLoggedIn,
+                      setUserDetails,
+                      setIsLoggedIn
+                    )
+                  }
+                >
+                  {" "}
+                  Login{" "}
+                </button>
               </form>
             </div>
           </div>
-        )
+        );
       }}
     </UserContext.Consumer>
-  )
+  );
 }
 export default Login;
