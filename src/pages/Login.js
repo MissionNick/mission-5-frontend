@@ -4,13 +4,11 @@ import { errorHandler } from "../components/shared/ErrorHandler";
 import { UserContext } from "../helper/Context";
 
 import Header from "../components/shared/Header";
-import PageNav from "../components/menu/MenuRegistration";
+import PageNav from "../components/menu/Menu";
 import NeedLogin from "../components/login/Login";
 import ChooseAccount from "../components/login/ChooseAccount";
 import SiteIndex from "../components/shared/SiteIndex";
 import Footer from "../components/shared/Footer";
-
-
 
 export default function Login() {
   return (

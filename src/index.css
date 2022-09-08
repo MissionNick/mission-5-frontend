@@ -11,3 +11,44 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.activeNavLink :hover{
+  
+  
+}
+.headerNavLinks{
+color: white;
+text-decoration: none;
+font-weight:bold;
+border-radius: 20px;
+padding-left: 30px;
+padding-right:30px;
+}
+ a:hover{
+  background-color: rgb(236, 233, 233);
+  color:rgba(45, 118, 184, 1);
+  padding: 4px;
+  box-shadow: 5px 10px 8px #888888;
+}
+
+.btnHeader {
+  height:max-content;
+  border:none;
+  background: none;
+  cursor:pointer;
+  padding-right: 20px;
+  padding-left: 10px;
+  text-decoration: none;
+}
+.btnHeader1 {
+   height:max-content;
+   border:none;
+   background: none;
+   cursor:pointer;
+   padding-right: 20px;
+   padding-left: 20px;
+   text-decoration: none;
+}
+
+#Or{
+   padding-left: 20px;
+}
