@@ -11,7 +11,7 @@ import { UserContext } from "./helper/Context";
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
-  const [userDetails, setUserDetails] = useState({});
+  const [userDetails, setUserDetails] = useState();
 
   return (
     <UserContext.Provider value={{ isLoggedIn, userDetails, setUserDetails,setIsLoggedIn }}>

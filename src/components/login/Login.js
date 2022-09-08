@@ -22,18 +22,20 @@ function Login() {
     setUserDetails,
     setIsLoggedIn
   ) => {
-    //event.preventDefault();
-    setUserDetails({ email: "test@test.com" })   //change to input.email
+    const tryEmail = { email: "" }
+    tryEmail.email = inputs.email
+    setUserDetails(tryEmail);   //change to input.email
     tryLogin(userDetails, setUserDetails, setIsLoggedIn)
+    console.log('User Details',userDetails.email);
   }
 
   return (
     <UserContext.Consumer>
-      {(userDetails, isLoggedIn, setUserDetails, setIsLoggedIn) => {
+      {({ userDetails, isLoggedIn, setUserDetails, setIsLoggedIn }) => {
         return (
           <div className={mainBody}>
             <div className={login_container}>
-              <form onSubmit={() => handleSubmit(userDetails, isLoggedIn, setUserDetails, setIsLoggedIn)}>
+              <form>
                 <label for="email" className={font}>
                   <br />
                   <b>Email</b>
@@ -52,7 +54,7 @@ function Login() {
                   Remember me
                 </label>
                 <br />
-                <input className={submitButton} type="submit" value="Submit" />
+                <button className={submitButton} type="button" onClick={() => handleSubmit(userDetails, isLoggedIn, setUserDetails, setIsLoggedIn)}> Login </button>
               </form>
             </div>
           </div>
