@@ -1,5 +1,11 @@
 .pnf_container {
-    height: 10em;
-    background-color: rgb(20, 20, 20);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 15em;
+    margin: 2%;
+    background-color: #0076be;
     color: white;
+    font-size: xx-large;
 }

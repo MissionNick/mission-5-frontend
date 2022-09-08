@@ -1,21 +1,20 @@
 import { NavLink } from "react-router-dom";
 
-
 import styles from "../styles/Navbar.module.css";
-const {nav_container} = styles;
+const {siteNav_container} = styles;
 
 const Navbar = () => {
   return (
-    <div className={nav_container}>
+    <div className={siteNav_container}>
       <NavLink
-        className={({ isActive }) => isActive ? "headerNavLinks activeNavLink" : "headerNavLinks"}
+        className={({ isActive }) => isActive ? "siteNavLinks activeSiteLink" : "siteNavLinks"}
         to="/"
       >Cars    
       </NavLink>
 
       <NavLink
         className={({ isActive }) =>
-          isActive ? "headerNavLinks activeNavLink" : "headerNavLinks"
+          isActive ? "siteNavLinks activeSiteLink" : "siteNavLinks"
         }
         to="/car-subscription">
         Turners Subscription
@@ -23,7 +22,7 @@ const Navbar = () => {
 
       <NavLink
         className={({ isActive }) =>
-          isActive ? "headerNavLinks activeNavLink" : "headerNavLinks"
+          isActive ? "siteNavLinks activeSiteLink" : "siteNavLinks"
         }
         to="/Trucks-Machinery">
         Trucks &amp; Machinery
@@ -31,7 +30,7 @@ const Navbar = () => {
 
       <NavLink
         className={({ isActive }) =>
-          isActive ? "headerNavLinks activeNavLink" : "headerNavLinks"
+          isActive ? "siteNavLinks activeSiteLink" : "siteNavLinks"
         }
         to="/Damaged-Vehicles">
         Damaged &amp; End of Life
@@ -39,7 +38,7 @@ const Navbar = () => {
 
       <NavLink
         className={({ isActive }) =>
-          isActive ? "headerNavLinks activeNavLink" : "headerNavLinks"
+          isActive ? "siteNavLinks activeSiteLink" : "siteNavLinks"
         }
         to="/motorcycles-scooters">
         Motorcycles
@@ -47,7 +46,7 @@ const Navbar = () => {
 
       <NavLink
         className={({ isActive }) =>
-          isActive ? "headerNavLinks activeNavLink" : "headerNavLinks"
+          isActive ? "siteNavLinks activeSiteLink" : "siteNavLinks"
         }
         to="/General-Goods">
         General Goods
@@ -55,7 +54,7 @@ const Navbar = () => {
 
       <NavLink
         className={({ isActive }) =>
-          isActive ? "headerNavLinks activeNavLink" : "headerNavLinks"
+          isActive ? "siteNavLinks activeSiteLink" : "siteNavLinks"
         }
         to="/buses-caravans">
         Buses, Caravans &amp; Motorhomes

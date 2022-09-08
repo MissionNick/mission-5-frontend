@@ -3,8 +3,6 @@ body{
     margin:0px;
     height:auto;
     background-color: white;
-
-   
 }
 
 .mainBody{
@@ -15,7 +13,7 @@ body{
 .login_container {
   Display:flex;
   justify-content: center;
-  width: 800px;
+  width: 80%;
   margin:40px;
   border-radius: 20px;
   border:1px solid black;
@@ -23,7 +21,12 @@ body{
   height:auto;
   padding:40px;
   box-sizing: border-box;
+  font-size: large;
+}
 
+.subSection{
+color: rgba(45, 118, 184, 1);
+font-weight: lighter;
 }
 
 .submitButton {
@@ -62,10 +65,14 @@ body{
     background: #f1f1f1;
     border-radius: 25px;
     box-shadow: 5px 10px 8px #888888;
+    font-size: large;
+    font-weight: lighter;
   }
   input[type=text]:focus, input[type=password]:focus {
     background-color: #ddd;
     outline: none;
+    font-size: large;
+    font-weight: lighter;
   }
 
 

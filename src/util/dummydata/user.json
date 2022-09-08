@@ -2,15 +2,22 @@
     {
         "email": "owner@domain.com",
         "password": "1234567890",
-        "role":"account.owner",
-        "photo":"url",
-        "name":"Mike"
+        "role": "account.owner",
+        "photo": "Mike.png",
+        "name": "Mike Mackintosh"
     },
     {
         "email": "member@domain.com",
         "password": "0987654321",
         "role": "account.member",
-        "photo": "url",
-        "name":"Lillian"
+        "photo": "Lillian.png",
+        "name": "Lillian Mackintosh"
+    },
+        {
+        "email": "",
+        "password": "",
+        "role": "account.silent",
+        "photo": "Sue.png",
+        "name": "Sue Mackintosh"
     }
 ]

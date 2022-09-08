@@ -15,7 +15,7 @@ const PageNav = () => {
         className={({ isActive }) =>
           isActive ? "headerNavLinks activeNavLink" : "headerNavLinks"
         }
-        to="/" 
+        to="/find-a-car" 
       >
         Find a Car
       </NavLink>
@@ -24,7 +24,7 @@ const PageNav = () => {
         className={({ isActive }) =>
           isActive ? "headerNavLinks activeNavLink" : "headerNavLinks"
         }
-        to="/" 
+        to="/how-to-buy" 
       >
         How to Buy
       </NavLink>
@@ -33,7 +33,7 @@ const PageNav = () => {
         className={({ isActive }) =>
           isActive ? "headerNavLinks activeNavLink" : "headerNavLinks"
         }
-        to="/" 
+        to="/sell-your-car" 
       >
         Sell your Car
       </NavLink>
@@ -42,7 +42,7 @@ const PageNav = () => {
         className={({ isActive }) =>
           isActive ? "headerNavLinks activeNavLink" : "headerNavLinks"
         }
-        to="/" 
+        to="/finance" 
       >
         Finance
       </NavLink>
@@ -60,7 +60,7 @@ const PageNav = () => {
         className={({ isActive }) =>
           isActive ? "headerNavLinks activeNavLink" : "headerNavLinks"
         }
-        to="/" 
+        to="/subscription" 
       >
         Turners Subscription
       </NavLink>
@@ -69,7 +69,7 @@ const PageNav = () => {
         className={({ isActive }) =>
           isActive ? "headerNavLinks activeNavLink" : "headerNavLinks"
         }
-        to="/" 
+        to="/auctions" 
       >
         Auctions
       </NavLink>
@@ -78,7 +78,7 @@ const PageNav = () => {
         className={({ isActive }) =>
           isActive ? "headerNavLinks activeNavLink" : "headerNavLinks"
         }
-        to="/" 
+        to="/services" 
       >
         Services &amp; Info
       </NavLink>

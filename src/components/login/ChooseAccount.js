@@ -1,11 +1,11 @@
 import styles from "../styles/ChooseAccount.module.css";
 import AccountTile from "../login/AccountTile"
 
-const { container,body_border } = styles;
+const { choose_container,body_border } = styles;
 
 export default function chooseAccount(accounts) {
   return (
-    <div className={container}>
+    <div className={choose_container}>
       <h1>ChooseAccount</h1>
       <div className={body_border}>
         {accounts && accounts.length ? (

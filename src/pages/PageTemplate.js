@@ -10,7 +10,7 @@ import Footer from "../components/shared/Footer";
 
 export default function Register() {
   return (
-    <div>
+    <div className="page_container">
       <ErrorBoundary FallbackComponent={Fallback} onError={errorHandler}>
         <Header />
         <PageNav />
