@@ -37,7 +37,7 @@ describe("GetTestData tests", () => {
     expect(actual).toStrictEqual(expected);
   });
 
-  it("User NotRegistered returns empty", () => {
+  it("User NotRegistered returns error", () => {
     //Arrange
     const input = "notregisterd@domain.com";
     const expected = { error:"No user found" };

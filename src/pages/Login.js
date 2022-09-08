@@ -8,11 +8,11 @@ import LoginBody from "../components/login/Login";
 import SiteIndex from "../components/shared/SiteIndex";
 import Footer from "../components/shared/Footer";
 
-export default function Login(isLoggedIn) {
+export default function Login() {
   return (
     <div>
       <ErrorBoundary FallbackComponent={Fallback} onError={errorHandler}>
-        <Header isLoggedIn={isLoggedIn} />
+        <Header />
         <PageNav />
         <LoginBody />
         <SiteIndex />

@@ -8,11 +8,11 @@ import Body from "../components/insurance/Body";
 import SiteIndex from "../components/shared/SiteIndex";
 import Footer from "../components/shared/Footer";
 
-export default function InsuranceAccount({ isLoggedIn }) {
+export default function InsuranceAccount() {
   return (
     <div>
       <ErrorBoundary FallbackComponent={Fallback} onError={errorHandler}>
-        <Header isLoggedIn={isLoggedIn} />
+        <Header />
         <PageNav />
         <Body />
         <SiteIndex />

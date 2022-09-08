@@ -28,7 +28,7 @@ function ShowAccounts(props) {
       accounts.map((tile) => {
         const { accName, accPic } = tile;
         return (
-          <AccountTile accName = {accName}, accPic = {accPic} />
+          <AccountTile accName={accName} accPic={accPic} />
         )
         })
       }
