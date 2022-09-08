@@ -1,4 +1,6 @@
 .container {
-    height: 15em;
+    height: auto;
     background-color: rgb(120, 120, 120);
+    
+
 }
