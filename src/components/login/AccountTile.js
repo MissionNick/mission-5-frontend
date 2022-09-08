@@ -1,6 +1,10 @@
+import React from 'react'
 
-export const AccountTile = (accName,accPic) => {
+const AccountTile = () => {
   return (
     <div>AccountTile</div>
   )
 }
+
+export default AccountTile
+

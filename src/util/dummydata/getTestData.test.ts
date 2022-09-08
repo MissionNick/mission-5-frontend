@@ -1,9 +1,10 @@
 import getTestData from "./getTestData";
 
-describe("GetTestData tests", () => {
+describe("GetTestData tests - email", () => {
   it("User Mike returns Mike as Owner values", () => {
     //Arrange
-    const input = "owner@domain.com";
+    const email = "owner@domain.com";
+    const password = "1234567890";
     const expected = {
       email: "owner@domain.com",
       password: "1234567890",
@@ -13,7 +14,7 @@ describe("GetTestData tests", () => {
     };
 
     //Act
-    const actual: any = getTestData(input);
+    const actual: any = getTestData(email, password);
 
     //Assert
     expect(actual).toStrictEqual(expected);
@@ -21,7 +22,8 @@ describe("GetTestData tests", () => {
 
   it("User Lillian returns Lillian as Member values", () => {
     //Arrange
-    const input = "member@domain.com";
+    const email = "member@domain.com";
+    const password = "0987654321";
     const expected = {
       email: "member@domain.com",
       password: "0987654321",
@@ -31,19 +33,33 @@ describe("GetTestData tests", () => {
     };
 
     //Act
-    const actual: any = getTestData(input);
+    const actual: any = getTestData(email, password);
 
     //Assert
     expect(actual).toStrictEqual(expected);
   });
 
-  it("User NotRegistered returns empty", () => {
+  it("User NotRegistered returns error", () => {
     //Arrange
-    const input = "notregisterd@domain.com";
-    const expected = { error:"No user found" };
+    const email = "notregisterd@domain.com";
+    const password = "nopassword";
+    const expected = { error: "No user found" };
 
     //Act
-    const actual: any = getTestData(input);
+    const actual: any = getTestData(email, password);
+
+    //Assert
+    expect(actual).toStrictEqual(expected);
+  });
+
+  it("Invalid password returns error", () => {
+    //Arrange
+    const email = "member@domain.com";
+    const password = "wrongpassword";
+    const expected = { error: "Invalid Password" };
+
+    //Act
+    const actual: any = getTestData(email, password);
 
     //Assert
     expect(actual).toStrictEqual(expected);

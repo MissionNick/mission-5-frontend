@@ -9,11 +9,11 @@ import Body from "../components/home/Home";
 import SiteIndex from "../components/shared/SiteIndex";
 import Footer from "../components/shared/Footer";
 
-export default function Home({ isLoggedIn }) {
+export default function Home() {
   return (
     <div>
       <ErrorBoundary FallbackComponent={Fallback} onError={errorHandler}>
-        <Header isLoggedIn={isLoggedIn} />
+        <Header/>
         <Menu />
         <Body />
         <SiteIndex />

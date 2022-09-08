@@ -8,11 +8,11 @@ import Body from "../components/registration/InsuranceRegistration";
 import SiteIndex from "../components/shared/SiteIndex";
 import Footer from "../components/shared/Footer";
 
-export default function Register({ isLoggedIn }) {
+export default function Register() {
   return (
     <div>
       <ErrorBoundary FallbackComponent={Fallback} onError={errorHandler}>
-        <Header isLoggedIn={isLoggedIn} />
+        <Header />
         <PageNav />
         <Body />
         <SiteIndex />
