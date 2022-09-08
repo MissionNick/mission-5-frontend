@@ -5,7 +5,7 @@ const { site_container } = styles;
 export default function SiteIndex() {
     return (
         <div className={site_container}>
-            Site Index
+         
         </div>
     )
 }

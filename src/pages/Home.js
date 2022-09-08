@@ -4,17 +4,17 @@ import { errorHandler } from "../components/shared/ErrorHandler";
 
 
 import Header from "../components/shared/Header";
-import PageNav from "../components/shared/PageNav";
-import Body from "../components/home/Body";
+import Menu from "../components/menu/MenuRegistration";
+import Body from "../components/home/Home";
 import SiteIndex from "../components/shared/SiteIndex";
 import Footer from "../components/shared/Footer";
 
-export default function Home({ isLoggedIn }) {
+export default function Home() {
   return (
     <div>
       <ErrorBoundary FallbackComponent={Fallback} onError={errorHandler}>
-        <Header isLoggedIn={isLoggedIn} />
-        <PageNav />
+        <Header/>
+        <Menu />
         <Body />
         <SiteIndex />
         <Footer />

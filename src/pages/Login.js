@@ -1,20 +1,28 @@
 import { ErrorBoundary } from "react-error-boundary";
 import { Fallback } from "../components/shared/Fallback";
 import { errorHandler } from "../components/shared/ErrorHandler";
+import { UserContext } from "../helper/Context";
 
 import Header from "../components/shared/Header";
-import PageNav from "../components/shared/PageNav";
-import LoginBody from "../components/shared/Login";
+import PageNav from "../components/menu/MenuRegistration";
+import NeedLogin from "../components/login/Login";
+import ChooseAccount from "../components/login/ChooseAccount";
 import SiteIndex from "../components/shared/SiteIndex";
 import Footer from "../components/shared/Footer";
 
-export default function Login({ isLoggedIn, setIsLoggedIn }) {
+
+
+export default function Login() {
   return (
     <div>
       <ErrorBoundary FallbackComponent={Fallback} onError={errorHandler}>
-        <Header isLoggedIn={isLoggedIn} />
+        <Header />
         <PageNav />
-        <LoginBody isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />
+        <UserContext.Consumer>
+          {({ isLoggedIn }) => {
+            return <>{isLoggedIn ? <ChooseAccount /> : <NeedLogin />}</>;
+          }}
+        </UserContext.Consumer>
         <SiteIndex />
         <Footer />
       </ErrorBoundary>

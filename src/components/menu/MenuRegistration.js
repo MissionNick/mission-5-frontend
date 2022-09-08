@@ -3,15 +3,23 @@ import styles from "../styles/Pagenav.module.css";
 const { page_nav_container } = styles;
 
 //TO DO change to match pagenav (copied from site nav bar)
+const linkStyle = {
+  color: 'white',
+  textDecoration: 'none',
+  fontWeight:'light'
+ 
+}
+
+
 
 const PageNav = () => {
   return (
     <div className={page_nav_container}>
-      <NavLink
+      <NavLink 
         className={({ isActive }) =>
           isActive ? "headerNavLinks activeNavLink" : "headerNavLinks"
         }
-        to="/"
+        to="/" style={{linkStyle}}
       >
         Find a Car
       </NavLink>
@@ -20,7 +28,7 @@ const PageNav = () => {
         className={({ isActive }) =>
           isActive ? "headerNavLinks activeNavLink" : "headerNavLinks"
         }
-        to="/"
+        to="/" style={{linkStyle}}
       >
         How to Buy
       </NavLink>
@@ -29,7 +37,7 @@ const PageNav = () => {
         className={({ isActive }) =>
           isActive ? "headerNavLinks activeNavLink" : "headerNavLinks"
         }
-        to="/"
+        to="/" style={{linkStyle}}
       >
         Sell your Car
       </NavLink>
@@ -38,7 +46,7 @@ const PageNav = () => {
         className={({ isActive }) =>
           isActive ? "headerNavLinks activeNavLink" : "headerNavLinks"
         }
-        to="/"
+        to="/" style={{linkStyle}}
       >
         Finance
       </NavLink>
@@ -47,7 +55,7 @@ const PageNav = () => {
         className={({ isActive }) =>
           isActive ? "headerNavLinks activeNavLink" : "headerNavLinks"
         }
-        to="/insurance"
+        to="/insurance" style={{linkStyle}}
       >
         Insurance
       </NavLink>
@@ -56,7 +64,7 @@ const PageNav = () => {
         className={({ isActive }) =>
           isActive ? "headerNavLinks activeNavLink" : "headerNavLinks"
         }
-        to="/"
+        to="/" style={{linkStyle}}
       >
         Turners Subscription
       </NavLink>
@@ -65,7 +73,7 @@ const PageNav = () => {
         className={({ isActive }) =>
           isActive ? "headerNavLinks activeNavLink" : "headerNavLinks"
         }
-        to="/"
+        to="/" style={{linkStyle}}
       >
         Auctions
       </NavLink>
@@ -74,7 +82,7 @@ const PageNav = () => {
         className={({ isActive }) =>
           isActive ? "headerNavLinks activeNavLink" : "headerNavLinks"
         }
-        to="/"
+        to="/" style={{linkStyle}}
       >
         Services &amp; Info
       </NavLink>
