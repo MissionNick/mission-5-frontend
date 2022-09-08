@@ -1,7 +1,7 @@
 import styles from "../styles/Login.module.css"
 import { useState } from 'react'
 
-const {submitButton,login_container,email,font,password,container}  = styles;
+const {submitButton,login_container,email,font,password,mainBody}  = styles;
 
 
  function Login({isLoggedIn,setIsloggedIn}) {
@@ -21,7 +21,7 @@ const handleSubmit = (event) => {
   alert(inputs)
 }
   return (
-  <div className={container}> 
+  <div className={mainBody}> 
     <div className={login_container}>
       <form onSubmit={handleSubmit}>
                     <label for="email" className={font}>

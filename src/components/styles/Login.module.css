@@ -7,8 +7,9 @@ body{
    
 }
 
-.container{
-    
+.mainBody{
+    display:flex;
+    justify-content: center;
 }
 
 .login_container {
