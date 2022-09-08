@@ -1,3 +1,7 @@
+.page_container{
+  width: 1280;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -11,10 +15,13 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-.activeNavLink :hover{
-  
-  
+.activeNavLink{
+  background-color: rgb(219, 202, 202);
+  color: rgba(45, 118, 184, 1);
+  padding: 3px;
+  box-shadow: 5px 10px 8px #888888;
 }
+
 .headerNavLinks{
 color: white;
 text-decoration: none;
@@ -23,10 +30,10 @@ border-radius: 20px;
 padding-left: 30px;
 padding-right:30px;
 }
- a:hover{
+
+.headerNavLinks:hover{
   background-color: rgb(236, 233, 233);
   color:rgba(45, 118, 184, 1);
-  padding: 4px;
   box-shadow: 5px 10px 8px #888888;
 }
 
@@ -49,6 +56,22 @@ padding-right:30px;
    text-decoration: none;
 }
 
-#Or{
-   padding-left: 20px;
+.activeSiteLink {
+  background-color: rgb(219, 202, 202);
+  color: rgba(45, 118, 184, 1);
+  padding: 3px;
+  box-shadow: 5px 10px 8px #888888;
+}
+
+.siteNavLinks {
+  color:rgba(45, 118, 184, 1);
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 20px;
+}
+
+.siteNavLinks:hover {
+  background-color: rgb(236, 233, 233);
+  color: rgba(45, 118, 184, 1);
+  box-shadow: 5px 10px 8px #888888;
 }

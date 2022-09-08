@@ -2,10 +2,12 @@ import Logo from "../../assets/images/turnerscars_logo_car.png";
 import ChineseContact from "../../assets/images/language-chinese-contact.png";
 import styles from "../styles/Header.module.css";
 import Navbar from "./Navbar";
-import { FaPhoneAlt, FaUser } from "react-icons/fa";
+import { FaPhoneAlt } from "react-icons/fa";
 import { MdLocationPin } from "react-icons/md";
 import { Link } from "react-router-dom";
 import Login from "../../pages/Login";
+import AccountHolder from "../shared/AccountHolder"
+import { UserContext } from "../../helper/Context";
 
 const {
   logo,
@@ -15,7 +17,7 @@ const {
   header_top,
   header_contact,
   chinese,
-  Or
+  Or,
 } = styles;
 
 export default function Header({ isLoggedIn }) {
@@ -27,18 +29,33 @@ export default function Header({ isLoggedIn }) {
           <img src={Logo} alt="Turners Logo for desktop"></img>
         </div>
         <div className={header_contact}>
-          <FaUser />
           <Link to="/login" exact component={Login} className={btnHeader}>
-            LOGIN
-          </Link> 
-          <p className={Or}>OR</p>
-          <Link to ="/login" exact component={Login}  className={btnHeader1}>
-            REGISTER
+            <AccountHolder />
           </Link>
+          <UserContext>
+            {({ isLoggedIn }) =>
+              !isLoggedIn ? (
+                <>
+                  <p>OR</p>
+                  <Link
+                    to="/login"
+                    exact
+                    component={Login}
+                    className={btnHeader1}
+                  >
+                    Register
+                  </Link>
+                </>
+              ) : (
+                ""
+              )
+            }
+          </UserContext>
+
           <FaPhoneAlt />
-          <p>0800 887 637</p>
+          <p className={Or}>0800 887 637</p>
           <MdLocationPin />
-          <p>Find Us</p>
+          <p className={Or}>Find Us</p>
           <div className={chinese}>
             <img src={ChineseContact} alt="Chinese speaking contact"></img>
           </div>

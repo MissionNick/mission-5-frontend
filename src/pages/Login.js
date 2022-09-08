@@ -12,7 +12,7 @@ import Footer from "../components/shared/Footer";
 
 export default function Login() {
   return (
-    <div>
+    <div className="page_container">
       <ErrorBoundary FallbackComponent={Fallback} onError={errorHandler}>
         <Header />
         <PageNav />

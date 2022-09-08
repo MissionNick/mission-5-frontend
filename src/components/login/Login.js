@@ -3,7 +3,7 @@ import { useState } from "react";
 import { UserContext } from "../../helper/Context";
 import tryLogin from "./tryLogin";
 
-const { submitButton, login_container, email, font, password, mainBody } =
+const { submitButton, login_container, email, font, password, mainBody,subSection } =
   styles;
 
 function Login() {
@@ -26,8 +26,7 @@ function Login() {
     tryUser.email = inputs.email;
     tryUser.password = inputs.pwd;
     setUserDetails(tryUser); //change to input.email
-    tryLogin(userDetails, setUserDetails, setIsLoggedIn);
-    console.log("User Details", userDetails);
+    setUserDetails(tryLogin(userDetails, setUserDetails, setIsLoggedIn))
   };
 
   return (
@@ -35,11 +34,12 @@ function Login() {
       {({ userDetails, isLoggedIn, setUserDetails, setIsLoggedIn }) => {
         return (
           <div className={mainBody}>
+        
             <div className={login_container}>
               <form>
                 <label for="email" className={font}>
                   <br />
-                  <b>Email</b>
+                  <b>Email:</b>
                   <br />
                   <input
                     className={email}
@@ -47,46 +47,40 @@ function Login() {
                     type="email"
                     value={inputs.email}
                     onChange={handleChange}
+                    required
                   />
                 </label>
                 <label className="writing">
                   <br />
-                  <b>Password</b>
+                  <b>Password:</b>
                   <br />
                   <input
                     className={password}
                     name="pwd"
-                    type="passport"
+                    type="password"
                     value={inputs.pwd}
                     onChange={handleChange}
+                    required
                   />
                 </label>
-                <label className={font}>
-                  <br />
-                  <input
-                    type="checkbox"
-                    checked="checked"
-                    name="remember"
-                    styleName="margin-bottom:15px"
-                  />
-                  Remember me
-                </label>
-                <br />
-                <button
-                  className={submitButton}
-                  type="button"
-                  onClick={() =>
-                    handleSubmit(
-                      userDetails,
-                      isLoggedIn,
-                      setUserDetails,
-                      setIsLoggedIn
-                    )
-                  }
-                >
-                  {" "}
-                  Login{" "}
-                </button>
+                <div className={subSection}>
+                  <p>Forgot password?</p>
+                  <button
+                    className={submitButton}
+                    type="button"
+                    onClick={() =>
+                      handleSubmit(
+                        userDetails,
+                        isLoggedIn,
+                        setUserDetails,
+                        setIsLoggedIn
+                      )
+                    }
+                  >
+                    {" "}
+                    Login{" "}
+                  </button>
+                </div>
               </form>
             </div>
           </div>

@@ -1,12 +1,13 @@
 import styles from "../styles/Home.module.css"
 
+
 const { home_container } = styles;
 
 const Body = () => {
   return (
     <div className={home_container}>
-      Turner site home
+      SITE HOME
     </div>
-  )};
+  );};
 
 export default Body;

@@ -4,7 +4,7 @@ const { pnf_container } = styles;
 export default function PageNotFound() {
   return (
     <div className={pnf_container}>
-      PageNotFound
+      Page Not Available
     </div>
   )
 }

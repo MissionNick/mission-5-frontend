@@ -1,9 +1,10 @@
 .container {
     display: flex;
-    justify-content: center;
-    padding-top: 100px;
-    height: 3em;
-    background-color: rgb(165, 160, 160);
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+    margin: 2%;
     color: white;
-    height: 180px;
+    font-size: xx-large;
 }
