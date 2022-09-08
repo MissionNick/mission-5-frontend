@@ -1,5 +1,3 @@
-import { FaSearch } from "react-icons/fa";
-
 const getTestData = (email: String, password: String) => {
   /*fetch("./user.json", { mode: "no-cors" })
     .then((res) => res.json())
